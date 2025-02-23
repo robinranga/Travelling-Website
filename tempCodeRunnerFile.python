@@ -1,0 +1,7 @@
+def subtraction():
+    x = int(input("Enter any number you want to subtract : "))
+    y = int(input("Enter other number you want to subtract : "))
+
+    return (x-y)
+
+subtraction()
