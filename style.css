@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* color: white; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -14,9 +13,6 @@
 
 body{
     background-color: rgb(233, 240, 251);
-    /* background-image: url(assets/back-color.png);
-    background-size: contain;
-    background-repeat: repeat; */
 }
 
 .opacity{
@@ -261,3 +257,110 @@ a{
 #contact p{
     font-size: 12px;
 }
+
+.button{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    background-color: rgb(48, 50, 50 ,0.5);
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: black 0 0 0.5rem;
+
+}
+
+
+
+/* Responsiveness */
+
+
+@media screen and (max-width: 1024px) {
+
+    .blog-cont {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+
+    .blog-cont .blog:last-child {
+        display: none;
+    }
+
+    .offer-cont {
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .offer-cont p {
+        width: 90%;
+    }
+    
+    .services-cont {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "srv1 srv1"
+                             "srv2 srv3"
+                             "srv4 srv5";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .blog-cont {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-cont {
+        grid-template-columns: 1fr;
+        grid-template-areas: "srv1"
+        "srv2"
+                             "srv3"
+                             "srv5"
+                             "srv4"
+                             ;
+                             grid-template-rows: repeat(5, 250px);
+                            }
+                            
+    .button {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+    }
+}
+
+    @media screen and (max-width: 630px) {
+        .nav {
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+    
+    ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .body .head1{
+        font-size: 25px;
+    }
+    .body .head2{
+        font-size: 15px;
+    }
+
+    .opacity{
+        justify-content: space-between;
+    }
+
+    .offer-cont p{
+        text-align: center;
+    }
+
+    #services > p{
+        text-align: center;
+    }
+    #contact p{
+        text-align: center;
+    }
+    }
